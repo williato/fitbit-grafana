@@ -21,7 +21,7 @@ oauth = OAuth2::Client.new(
   token_url: "https://api.fitbit.com/oauth2/token"
 )
 
-token_path = "./shared/token.yml"
+token_path = "/config/token.yml"
 
 if File.exist? token_path
   token_hash = YAML.load File.read(token_path)
