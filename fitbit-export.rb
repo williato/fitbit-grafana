@@ -9,7 +9,7 @@ require 'influxdb'
 $stdout.sync = true # docker IO buffer
 
 influxdb = InfluxDB::Client.new "fitbit",
-  host: "influxdb",
+  host: ENV["INFLUXDB"],
   username: "fitbit",
   password: "fitbit",
   time_precision: "s"
